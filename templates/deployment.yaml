@@ -15,6 +15,8 @@ spec:
         env:
         - name: PHPLDAPADMIN_LDAP_HOSTS
           value: {{ .Values.LDAP.host }}
+        - name: PHPLDAPADMIN_HTTPS
+          value: 'false'
         ports:
         - containerPort: 80
         resources:
