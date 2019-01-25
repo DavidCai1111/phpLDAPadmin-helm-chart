@@ -4,3 +4,7 @@ image:
 
 LDAP:
   host: openldap-service.default.svc.cluster.local:389
+
+limits:
+  cpu: 100m
+  memory: 256Mi
