@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: phpldapadmin
+spec:
+  selector:
+    app: phpldapadmin
+  ports:
+  - protocol: TCP
+    port: 80
+    name: phpldapadmin-port
+  type: ClusterIP

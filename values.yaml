@@ -1,0 +1,6 @@
+image:
+  name: osixia/phpldapadmin
+  version: 0.7.2
+
+LDAP:
+  host: openldap-service.default.svc.cluster.local:389

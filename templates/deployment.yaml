@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: phpldapadmin
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: phpldapadmin
+    spec:
+      containers:
+      - name: phpldapadmin
+        image: {{ .Values.image.name }}:{{ .Values.image.version }}
+        env:
+        - name: PHPLDAPADMIN_LDAP_HOSTS
+          value: {{ .Values.LDAP.host }}
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 100m
+            memory: 256Mi
