@@ -3,7 +3,7 @@ image:
   version: 0.7.2
 
 LDAP:
-  host: openldap.default.svc.cluster.local:389
+  host: ldap://openldap.default.svc.cluster.local:389
 
 limits:
   cpu: 100m
